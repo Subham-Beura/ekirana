@@ -10,8 +10,8 @@ const Navbar = () => {
                 <Link href={"#"} className="boprder-2 px-5  py-1  border-b-2 text-center"><li>My Cart</li></Link>
             </ul>
             <div>
-                <button className="button md:w-24 ">Login</button>
-                <button className="button md:w-24 ">SignUp</button>
+                <button className="button md:w-24 "><Link href='./login'>Login</Link></button>
+                <button className="button md:w-24 "><Link href="./signup">SignUp</Link></button>
 
             </div>
         </div>
