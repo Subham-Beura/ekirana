@@ -7,13 +7,13 @@ const Signup=()=>{
     const [error, setError] = useState('');
     const router = useRouter();
   
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
       e.preventDefault( );
       try {
         const res = await axios.post('http://localhost:4000/auth/signup', { username, password });
         console.log(res.data)
         router.push("/login")
-      } catch (err) {
+      } catch (err:any) {
         setError(err);
       }
     };
