@@ -23,7 +23,7 @@ nextApp.prepare().then(() => {
     app.get('/', (req, res) => {
         res.send("Hello Wordl")
     })
-    const PORT = 3000
+    const PORT = 4000
     app.listen(PORT, () => {
         console.log("Server Started on ", PORT)
     });
