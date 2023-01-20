@@ -12,6 +12,7 @@ const Signup=()=>{
       try {
         const res = await axios.post('http://localhost:4000/auth/signup', { username, password });
         console.log(res.data)
+        router.push("/login")
       } catch (err) {
         setError(err);
       }
