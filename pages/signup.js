@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-const signup=()=>{
+const Signup=()=>{
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -36,4 +36,4 @@ const signup=()=>{
       </form>
     );
 }
-export default signup
+export default Signup
