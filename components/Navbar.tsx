@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 import { useState } from "react"
 
 const Navbar = () => {
@@ -16,7 +17,11 @@ const Navbar = () => {
                     <button className="button md:w-24 "><Link href='/login'>Login</Link></button>
                     <button className="button md:w-24 "><Link href="/signup">SignUp</Link></button>
                 </div>
-                <div className="md:hidden w-10 bg-black border-2 border-white h-10 m-3" onClick={() => setIsOpen(!isOpen)} ></div>
+                {isOpen ?
+                    <AiOutlineClose className="md:hidden w-7  h-7 m-3" onClick={() => setIsOpen(!isOpen)} />
+                    :
+                    <AiOutlineMenu className="md:hidden w-7  h-7 m-3" onClick={() => setIsOpen(!isOpen)} />
+                }
             </div>
             <ul className={`${isOpen ? "block" : "hidden"}  h-fit md:flex w-[100vw] md:w-[50vw] mx-10 px-3  justify-between items-center  `}>
                 <Link href={"/"} className="menu-button"><li>Home</li></Link>
