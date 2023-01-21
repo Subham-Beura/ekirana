@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .menu-button{
-    @apply border-x-2 border-x-black hover:border-2 hover:border-white  px-5  py-1  border-b-2 text-center
+    @apply md:border-x-2 md:border-x-black hover:border-2 hover:border-white  px-5  py-1  md:border-b-2 md:text-center
 }
 .button{
     @apply p-3 mx-1 md:mx-3 md:border-2 border-indigo-200 rounded-lg
