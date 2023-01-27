@@ -23,7 +23,7 @@ const Signup = () => {
     <>
       <Navbar />
       <div className='flex justify-center items-center h-[93.5vh] bg-white'>
-        <form onSubmit={handleSubmit} className="w-72 h-72 p-4 flex flex-col justify-center space-y-10 border-2 border-black">
+        <form onSubmit={handleSubmit} className="w-72  h-72 p-4 flex flex-col justify-center space-y-10 border-2 border-black">
           <input
             type="text"
             className='outline-none border-b-2 border-black'
