@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { useState } from "react"
 
 const Navbar = () => {
@@ -8,11 +8,11 @@ const Navbar = () => {
     return (
         <div className="h-fit md:h-20  bg-black text-white px-4 flex flex-col justify-start items-center md:flex-row md:justify-between  ">
             <div className="w-[100vw] md:w-fit flex  justify-between">
-                <h1 className=" w-[30vw] md:w-fit p-3 text-2xl text-left">
-                    <Link href='/'>
+                <Link href='/'>
+                    <h1 className=" w-[30vw] md:w-fit p-3 text-2xl text-left">
                         e-Kirana
-                    </Link>
-                </h1>
+                    </h1>
+                </Link>
                 <div className="w-fit flex flex-row md:hidden ">
                     <button className="button md:w-24 "><Link href='/login'>Login</Link></button>
                     <button className="button md:w-24 "><Link href="/signup">SignUp</Link></button>
@@ -29,8 +29,16 @@ const Navbar = () => {
                 <Link href={"/cart"} className="menu-button"><li>My Cart</li></Link>
             </ul>
             <div className="hidden md:block">
-                <button className="button md:w-24 "><Link href='/login'>Login</Link></button>
-                <button className="button md:w-24 "><Link href="/signup">SignUp</Link></button>
+                <Link href='/login'>
+                    <button className="button md:w-24 ">
+                        Login
+                    </button>
+                </Link>
+                <button className="button md:w-24 ">
+                    <Link href="/signup">
+                        SignUp
+                    </Link>
+                </button>
             </div>
         </div>
     )
