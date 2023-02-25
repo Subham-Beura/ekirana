@@ -35,8 +35,8 @@ const Navbar = () => {
       </div>
       <ul
         className={`${
-          isOpen ? "block" : "hidden"
-        }  mx-10 h-fit w-[100vw] items-center justify-between px-3  md:flex md:w-[50vw]  `}
+          isOpen ? "h-fit" : "h-0"
+        }  mx-10 w-[100vw]  items-center justify-between overflow-hidden px-3  md:flex md:w-[50vw]  `}
       >
         <Link href={"/"} className="menu-button">
           <li>Home</li>
