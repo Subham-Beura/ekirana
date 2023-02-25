@@ -6,7 +6,7 @@ const Navbar = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex h-fit  flex-col items-center justify-start bg-black px-4 text-white md:h-20 md:flex-row md:justify-between  ">
+    <div className="flex h-[7svh]  flex-col items-center justify-start bg-black px-4 text-white md:flex-row md:justify-between  ">
       <div className="flex w-[100vw] justify-between  md:w-fit">
         <Link href="/">
           <h1 className=" w-[30vw] p-3 text-left text-2xl md:w-fit">
@@ -48,7 +48,7 @@ const Navbar = () => {
           <li>My Cart</li>
         </Link>
       </ul>
-      <div className="hidden md:block">
+      <div className=" hidden w-fit border border-indigo-50 md:flex">
         <Link href="/login">
           <button className="button md:w-24 ">Login</button>
         </Link>
