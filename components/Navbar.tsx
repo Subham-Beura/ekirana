@@ -52,9 +52,9 @@ const Navbar = () => {
         <Link href="/login">
           <button className="button md:w-24 ">Login</button>
         </Link>
-        <button className="button md:w-24 ">
-          <Link href="/signup">SignUp</Link>
-        </button>
+        <Link href="/signup">
+          <button className="button md:w-24 ">SignUp</button>
+        </Link>
       </div>
     </div>
   );
