@@ -7,7 +7,7 @@ const Navbar = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed z-10 flex h-fit w-screen flex-col  bg-black px-4 text-white md:flex-row md:justify-between ">
+    <div className="fixed z-10 flex h-fit w-screen flex-col bg-transparent  bg-gradient-to-b from-[#0000008c] to-transparent  text-white md:flex-row md:justify-between  ">
       <div className="flex  justify-between  md:w-fit">
         {isOpen ? (
           <AiOutlineClose
