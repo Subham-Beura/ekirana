@@ -11,8 +11,8 @@ const Navbar = () => {
       className={`fixed z-10 flex h-fit w-screen flex-col  ${
         isOpen
           ? "bg-white text-black"
-          : "bg-gradient-to-b from-[#000000a7] to-transparent"
-      }   text-white md:flex-row md:justify-between  `}
+          : "bg-gradient-to-b from-[#000000a7] to-transparent text-white"
+      } md:flex-row md:justify-between  `}
     >
       <div className="flex  justify-between  md:w-fit">
         {isOpen ? (
