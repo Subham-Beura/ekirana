@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         sans: ["Lexend Deca"],
         fancyFont: ["Dancing Script"],
+        lobster: ["Lobster Two"],
       },
     },
   },
