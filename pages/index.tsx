@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <div className="box-border flex flex-col bg-teal-300   ">
+    <div className="box-border flex flex-col  bg-teal-300 font-fancy   ">
       <div className="flex h-screen flex-col">
         <Navbar />
         {/* <Filter /> */}

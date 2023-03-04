@@ -9,6 +9,10 @@ module.exports = {
       backgroundImage: {
         hero: "linear-gradient(to  bottom, black,red),url('/img/mobile-bg2.jpg')",
       },
+      fontFamily: {
+        sans: ["Lexend Deca"],
+        fancyFont: ["Dancing Script"],
+      },
     },
   },
   plugins: [],

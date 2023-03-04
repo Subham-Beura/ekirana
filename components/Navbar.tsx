@@ -5,19 +5,34 @@ import {
   AiOutlineShoppingCart,
   AiOutlineSearch,
 } from "react-icons/ai";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dropdown } from "./Dropdown";
 
 const Navbar = () => {
   let [isOpen, setIsOpen] = useState(false);
+  const transparent =
+    "bg-gradient-to-b from-[#00000088] to-transparent text-white";
+  const white = "bg-white text-black";
+  let [navBG, setNavBG] = useState<typeof white | typeof transparent>(
+    transparent
+  );
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 50;
+      setNavBG(show ? white : transparent);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
       className={`fixed z-10 flex h-fit  min-h-[50px] w-screen flex-col  ${
-        isOpen
-          ? "bg-white text-black"
-          : "bg-gradient-to-b from-[#00000088] to-transparent text-white"
-      } md:flex-row md:justify-between  `}
+        isOpen ? "bg-white text-black" : navBG
+      } text-black md:flex-row  md:justify-between `}
     >
       <div className="relative flex  h-[50px] justify-center  md:w-fit">
         {isOpen ? (
@@ -32,8 +47,8 @@ const Navbar = () => {
           />
         )}
         <Link href="/" className="flex h-[50px] items-center">
-          <h1 className=" h-fit  w-fit text-center text-xl font-bold md:w-fit">
-            USTAV
+          <h1 className=" h-fit  w-fit text-center font-fancyFont text-3xl font-bold  md:w-fit">
+            utsav
           </h1>
         </Link>
 
