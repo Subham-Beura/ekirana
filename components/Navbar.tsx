@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiOutlineShoppingCart,
+  AiOutlineSearch,
+} from "react-icons/ai";
 import { useState } from "react";
 import { Dropdown } from "./Dropdown";
 
@@ -11,33 +16,33 @@ const Navbar = () => {
       className={`fixed z-10 flex h-fit w-screen flex-col  ${
         isOpen
           ? "bg-white text-black"
-          : "bg-gradient-to-b from-[#000000a7] to-transparent text-white"
+          : "bg-gradient-to-b from-[#00000088] to-transparent text-white"
       } md:flex-row md:justify-between  `}
     >
-      <div className="flex  justify-between  md:w-fit">
+      <div className="relative  flex justify-center  md:w-fit">
         {isOpen ? (
           <AiOutlineClose
-            className="m-3 h-7  w-7 md:hidden"
+            className="absolute left-0  my-3 mx-2 h-7 w-7 md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           />
         ) : (
           <AiOutlineMenu
-            className="m-3 h-7  w-7 md:hidden"
+            className="absolute left-0 my-2 mx-2 h-7 w-7 md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           />
         )}
         <Link href="/">
-          <h1 className=" w-[30vw] p-3 text-left text-2xl md:w-fit">
-            e-Kirana
+          <h1 className="mx-auto w-fit pt-2 text-center text-xl font-bold md:w-fit">
+            USTAV
           </h1>
         </Link>
 
-        <div className="flex w-fit flex-row md:hidden ">
+        <div className="absolute right-0 flex w-fit flex-row md:hidden ">
           <button className="button md:w-24 ">
-            <Link href="/login">Login</Link>
+            <AiOutlineSearch size={20} />
           </button>
           <button className="button md:w-24 ">
-            <Link href="/signup">SignUp</Link>
+            <AiOutlineShoppingCart size={20} />
           </button>
         </div>
       </div>
