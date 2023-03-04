@@ -13,13 +13,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed z-10 flex h-fit w-screen flex-col  ${
+      className={`fixed z-10 flex h-fit  min-h-[50px] w-screen flex-col  ${
         isOpen
           ? "bg-white text-black"
           : "bg-gradient-to-b from-[#00000088] to-transparent text-white"
       } md:flex-row md:justify-between  `}
     >
-      <div className="relative  flex justify-center  md:w-fit">
+      <div className="relative flex  h-[50px] justify-center  md:w-fit">
         {isOpen ? (
           <AiOutlineClose
             className="absolute left-0  my-3 mx-2 h-7 w-7 md:hidden"
@@ -31,13 +31,13 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
           />
         )}
-        <Link href="/">
-          <h1 className="mx-auto w-fit pt-2 text-center text-xl font-bold md:w-fit">
+        <Link href="/" className="flex h-[50px] items-center">
+          <h1 className=" h-fit  w-fit text-center text-xl font-bold md:w-fit">
             USTAV
           </h1>
         </Link>
 
-        <div className="absolute right-0 flex w-fit flex-row md:hidden ">
+        <div className="absolute right-0 flex h-[50px] w-20 flex-row items-center justify-around md:hidden ">
           <button className="button md:w-24 ">
             <AiOutlineSearch size={20} />
           </button>
