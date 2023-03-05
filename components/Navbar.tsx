@@ -34,10 +34,10 @@ const Navbar = () => {
         isOpen ? "bg-white text-black" : navBG
       } text-black md:flex-row  md:justify-between `}
     >
-      <div className="relative flex  h-[50px] justify-center  md:w-fit">
+      <div className="relative flex  h-[50px] items-center justify-center  md:w-fit">
         {isOpen ? (
           <AiOutlineClose
-            className="absolute left-0  my-3 mx-2 h-7 w-7 md:hidden"
+            className="absolute left-0  my-3 mx-2 h-5 w-5 md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           />
         ) : (
