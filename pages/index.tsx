@@ -52,14 +52,18 @@ export default function Home() {
           Event in bbsr
         </div>
       </section>
-      <section className="flex h-[50vh] flex-col justify-center space-y-5 bg-beige px-5 text-center">
+      <section className="item flex h-[50vh] flex-col justify-center space-y-5 bg-beige px-5 text-center">
         <h4>Be First In Line</h4>
         <p>
           Keep up to date on product launches and be first in line for limited
           edition pieces, collabs and more. Subscribe to our newsletter and we
           got you covered.
         </p>
-        <input type="text" placeholder="EMAIL" />
+        <input
+          type="text"
+          placeholder="EMAIL"
+          className="mx-auto w-[30vw] px-2 py-3 shadow"
+        />
         <button>SIGN UP</button>
       </section>
       <Footer />
