@@ -42,8 +42,8 @@ export default function Home() {
         <p>EXTREME </p>
       </section>
       <section>
-        <div>New store</div>
-        <div>Event in bbsr</div>
+      <div className="m-3 my-5 h-[40vh] p-5 shadow ">New store</div>
+      <div className="m-3 my-5 h-[40vh] p-5 shadow ">Event in bbsr</div>
       </section>
       <section className="flex h-[50vh] flex-col justify-center space-y-5 bg-beige px-5 text-center">
         <h4>Be First In Line</h4>
