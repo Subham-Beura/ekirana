@@ -1,4 +1,3 @@
-import Filter from "../components/Home/Filter";
 import Footer from "../components/Footer";
 import Featured from "../components/Home/Featured";
 import Hero from "../components/Home/Hero";
@@ -37,6 +36,24 @@ export default function Home() {
             LEARN MORE
           </Link>
         </div>
+      </section>
+      <section className="flex h-[70vh] flex-col bg-black text-center text-white">
+        <h4>100% cotton</h4>
+        <p>EXTREME </p>
+      </section>
+      <section>
+        <div>New store</div>
+        <div>Event in bbsr</div>
+      </section>
+      <section className="flex h-[50vh] flex-col justify-center space-y-5 bg-beige px-5 text-center">
+        <h4>Be First In Line</h4>
+        <p>
+          Keep up to date on product launches and be first in line for limited
+          edition pieces, collabs and more. Subscribe to our newsletter and we
+          got you covered.
+        </p>
+        <input type="text" placeholder="EMAIL" />
+        <button>SIGN UP</button>
       </section>
       <Footer />
     </div>
