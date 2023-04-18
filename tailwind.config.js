@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "linear-gradient(to  bottom, black,red),url('/img/mobile-bg2.jpg')",
+        hero: "url('/img/mobile-bg2.jpg')",
       },
       colors: {
         fabric: "#78666b",

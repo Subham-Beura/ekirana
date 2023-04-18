@@ -10,8 +10,7 @@ import { Dropdown } from "./Dropdown";
 
 const Navbar = () => {
   let [isOpen, setIsOpen] = useState(false);
-  const transparent =
-    "bg-gradient-to-b from-[#00000088] to-transparent text-white";
+  const transparent = "bg-transparent text-white";
   const white = "bg-white text-black";
   let [navBG, setNavBG] = useState<typeof white | typeof transparent>(
     transparent
@@ -32,7 +31,7 @@ const Navbar = () => {
     <div
       className={`fixed z-10 flex h-fit  min-h-[50px] w-screen flex-col text-white ${
         isOpen ? "bg-white text-black" : navBG
-      }  md:flex-row  md:justify-between `}
+      }  md:flex-row  md:justify-between  `}
     >
       <div className="relative flex  h-[50px] items-center justify-center  md:w-fit">
         {isOpen ? (
@@ -47,8 +46,8 @@ const Navbar = () => {
           />
         )}
         <Link href="/" className="flex h-[50px] items-center">
-          <h1 className=" h-fit  w-fit text-center font-fancyFont text-3xl font-bold  md:w-fit">
-            utsav
+          <h1 className=" h-fit  w-fit text-center font-fancyFont text-4xl font-extrabold md:w-fit">
+            UTSAV
           </h1>
         </Link>
 
