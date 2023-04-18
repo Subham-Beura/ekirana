@@ -41,9 +41,16 @@ export default function Home() {
         <h4>100% cotton</h4>
         <p>EXTREME </p>
       </section>
-      <section>
-      <div className="m-3 my-5 h-[40vh] p-5 shadow ">New store</div>
-      <div className="m-3 my-5 h-[40vh] p-5 shadow ">Event in bbsr</div>
+      <section className="w-screen md:flex md:justify-between">
+        <div className="m-3 my-5 h-[40vh] p-5 shadow md:w-[30vw]">
+          New store
+        </div>
+        <div className="m-3 my-5 h-[40vh] p-5 shadow md:w-[30vw]">
+          Event in bbsr
+        </div>
+        <div className="m-3 my-5 h-[40vh] p-5 shadow md:w-[30vw]">
+          Event in bbsr
+        </div>
       </section>
       <section className="flex h-[50vh] flex-col justify-center space-y-5 bg-beige px-5 text-center">
         <h4>Be First In Line</h4>
