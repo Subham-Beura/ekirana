@@ -41,14 +41,12 @@ export default function Home() {
         <h4>100% cotton</h4>
         <p>EXTREME </p>
       </section>
-      <section className="w-screen md:flex md:justify-between">
-        <div className="m-3 my-5 h-[40vh] p-5 shadow md:w-[30vw]">
-          New store
-        </div>
-        <div className="m-3 my-5 h-[40vh] p-5 shadow md:w-[30vw]">
+      <section className=" items-center md:flex md:justify-around">
+        <div className=" my-5 h-[40vh] p-5 shadow  md:w-[30vw]">New store</div>
+        <div className=" my-5 h-[40vh] p-5 shadow  md:w-[30vw]">
           Event in bbsr
         </div>
-        <div className="m-3 my-5 h-[40vh] p-5 shadow md:w-[30vw]">
+        <div className=" my-5 h-[40vh] p-5 shadow  md:w-[30vw]">
           Event in bbsr
         </div>
       </section>
