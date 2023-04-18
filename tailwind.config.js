@@ -12,6 +12,8 @@ module.exports = {
       colors: {
         fabric: "#78666b",
         beige: "#f5f4f0",
+        lightbrown: "#AFA191",
+        darkbrown: "#372424",
       },
       fontFamily: {
         sans: ["Lexend Deca"],
