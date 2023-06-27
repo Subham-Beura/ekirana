@@ -39,8 +39,8 @@ export function Dropdown(props: { isOpen: boolean }) {
         >
           <li className="px-5">My Orders</li>
         </Link>
+        <div>Login</div>
       </ul>
-      <div>Login</div>
     </>
   );
 }
