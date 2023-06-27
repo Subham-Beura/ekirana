@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { signIn } from "next-auth/react";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -10,14 +11,12 @@ const Login = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        process.env.NEXT_PUBLIC_API_URL + "/auth/login",
-        {
-          emailID: username,
-          password,
-        }
-      );
-      console.log(res.data);
+      const res = await signIn("credentials", {
+        emailID: username,
+        password: password,
+        redirect: false,
+        callbackUrl: "/",
+      });
     } catch (err: any) {
       setError(err.response);
     }
