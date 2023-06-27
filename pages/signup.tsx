@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Navbar from "../components/Navbar";
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -24,7 +23,6 @@ const Signup = () => {
 
   return (
     <>
-      <Navbar />
       <div className="flex h-[93.5vh] items-center justify-center bg-white">
         <form
           onSubmit={handleSubmit}

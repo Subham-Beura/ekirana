@@ -1,23 +1,37 @@
-import React from "react";
-import { useEffect, useState } from "react";
 import Link from "next/link";
-
-import HomeNavbar from "./HomeNavbar";
-import { Dropdown } from "./Dropdown";
-
 import {
   AiOutlineMenu,
   AiOutlineClose,
-  AiOutlineSearch,
   AiOutlineShoppingCart,
+  AiOutlineSearch,
 } from "react-icons/ai";
+import { useEffect, useState } from "react";
+import { Dropdown } from "./Dropdown";
 
-export default function Navbar() {
+const Navbar = () => {
   let [isOpen, setIsOpen] = useState(false);
+  const transparent = "bg-transparent text-white";
+  const white = "bg-white text-black";
+  let [navBG, setNavBG] = useState<typeof white | typeof transparent>(
+    transparent
+  );
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 50;
+      setNavBG(show ? white : transparent);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
-      className={`fixed z-10 flex h-fit  min-h-[50px] w-screen flex-col bg-white text-black`}
+      className={`fixed z-10 flex h-fit  min-h-[50px] w-screen flex-col text-white ${
+        isOpen ? "bg-white text-black" : navBG
+      }    `}
     >
       <div className="relative flex  h-[50px] items-center justify-center   ">
         {isOpen ? (
@@ -68,4 +82,5 @@ export default function Navbar() {
       <Dropdown isOpen={isOpen} />
     </div>
   );
-}
+};
+export default Navbar;

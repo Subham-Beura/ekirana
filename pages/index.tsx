@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import Featured from "../components/Home/Featured";
 import Hero from "../components/Home/Hero";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/HomeNavbar";
 import Message from "../components/Home/Message";
 import Link from "next/link";
 
